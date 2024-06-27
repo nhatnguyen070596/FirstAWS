@@ -18,7 +18,7 @@ app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
-app.MapGet("/", () => "Nhat Ne 1");
+app.MapGet("/", () => "Đây là API của nhật ");
 
 app.MapControllers();
 
