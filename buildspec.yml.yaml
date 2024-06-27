@@ -1,0 +1,17 @@
+version: 0.2
+phases:
+  install:
+    runtime-versions:
+      dotnet: 6.0
+  pre_build:
+    commands:
+      - dotnet restore FirstAWS/FirstAWS.csproj
+  build:
+    commands:
+      - dotnet build FirstAWS/FirstAWS.csproj
+  post_build:
+    commands:
+      - dotnet publish -c Release -o ./app/ FirstAWS/FirstAWS.csproj
+artifacts:
+  files:
+    - '**/*'
